@@ -960,7 +960,7 @@ rule_arch=""
 if [[ "$arch" == "$rule_arch" ]] || [[ -z "$rule_arch" ]]; then
     #echo 'Running the command to check the settings for: os_authenticated_root_enable ...' | tee -a "$audit_log"
     unset result_value
-    result_value=$(/usr/bin/csrutil authenticated-root | /usr/bin/grep -c 'enabled'
+    result_value=$(echo 2 | /usr/bin/csrutil authenticated-root | /usr/bin/grep -c 'enabled'
 )
     # expected result {'integer': 1}
 
