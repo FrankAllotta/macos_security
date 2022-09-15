@@ -1674,7 +1674,7 @@ NOTE: Authenticated Root is enabled by default on macOS systems.
 To check the state of the system, run the following command(s):
 [source,bash,options="nowrap"]
 ----
-/usr/bin/csrutil authenticated-root | /usr/bin/grep -c 'enabled'
+echo 2 | /usr/bin/csrutil authenticated-root | /usr/bin/grep -c 'enabled'
 
 ----
 
