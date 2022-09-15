@@ -7,7 +7,7 @@ discussion: |
 
   NOTE: Authenticated Root is enabled by default on macOS systems.
 check: |
-  /usr/bin/csrutil authenticated-root | /usr/bin/grep -c 'enabled'
+  echo 2 | /usr/bin/csrutil authenticated-root | /usr/bin/grep -c 'enabled'
 result:
   integer: 1
 fix: |
